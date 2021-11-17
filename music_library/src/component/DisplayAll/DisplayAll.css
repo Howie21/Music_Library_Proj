@@ -1,0 +1,13 @@
+.allSongs{
+    text-align: center;
+    background-color:lightgrey;
+}
+
+.tablestyle{
+    width:100%;
+    align-self: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    }
