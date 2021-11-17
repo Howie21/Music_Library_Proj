@@ -1,13 +1,13 @@
 import React from 'react';
-
+import "./Header.css"
 
 function Header(props) {
     return ( 
-        <div>
-            <h1 style={{textAlign:'center'}}>
+        <div className="holder">
+            <h1 className="head">
                 Music Library
             </h1>
-            <p style={{textAlign:'right'}}>Created as a project for devCodeCamp</p>
+            <p className="comment">Created as a project for devCodeCamp</p>
         </div>
      );
 }
