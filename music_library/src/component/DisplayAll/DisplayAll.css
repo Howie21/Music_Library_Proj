@@ -1,11 +1,15 @@
 .allSongs{
     text-align: center;
-    background-color:lightgrey;
+    
 }
 
 .tablestyle{
     width:100%;
     align-self: center;
+    background-color:lightgrey;
+    padding: 10px;
+    border:10px solid white;
+    border-top: 20px solid white;
 }
 
 table, th, td {
