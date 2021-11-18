@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './component/Header/Header';
 import DisplayAll from './component/DisplayAll/DisplayAll';
 import axios from 'axios';
+import CreateSong from './component/CreateSong/CreateSong';
 
 class App extends Component {
   constructor(props) {
@@ -30,12 +31,23 @@ class App extends Component {
     this.getAllSongs();
   }
 
+  createSong = async (song) => {
+    await axios({
+      method: 'post',
+      url: "http://127.0.0.1:8000/music/",
+      headers: {},
+      data: song
+    });
+    this.getAllSongs();
+  }
+
 
   render() { 
     return ( 
       <div className="container-fluid">
         <Header />
         <DisplayAll deleteSongMethod ={this.deleteSong} listOfSongs ={this.state.listOfSongs} />
+        <CreateSong createSong={this.createSong} />
       </div>
      );
   }
