@@ -1,0 +1,21 @@
+.tableContainer {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 75%;
+    text-align: center;
+}
+
+.dropDownbar {
+    align-self: center;
+    width: 100%;
+}
+
+.dropDownList{
+    text-align: center;
+    background-color: lightblue;
+}
+
+.filterTableDisplay {
+    width: 100%;
+}
