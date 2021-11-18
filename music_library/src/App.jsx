@@ -3,6 +3,7 @@ import Header from './component/Header/Header';
 import DisplayAll from './component/DisplayAll/DisplayAll';
 import axios from 'axios';
 import CreateSong from './component/CreateSong/CreateSong';
+import FilterTable from './component/FilterTable/FilterTable';
 
 class App extends Component {
   constructor(props) {
@@ -18,11 +19,9 @@ class App extends Component {
 
   async getAllSongs() {
     let songs = await axios.get("http://127.0.0.1:8000/music/");
-    console.log(songs);
     this.setState({ 
       listOfSongs: songs.data
     });
-    console.log(this.state.listOfSongs)
   }
 
   deleteSong = async (song) => {
@@ -48,6 +47,7 @@ class App extends Component {
         <Header />
         <DisplayAll deleteSongMethod ={this.deleteSong} listOfSongs ={this.state.listOfSongs} />
         <CreateSong createSong={this.createSong} />
+        <FilterTable getAllSongs={this.getAllSongs} />
       </div>
      );
   }
