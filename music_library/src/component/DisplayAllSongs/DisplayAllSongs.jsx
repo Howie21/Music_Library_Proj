@@ -1,5 +1,5 @@
 import React from 'react';
-import "./DisplayAll.css"
+import "./DisplayAllSongs.css"
 
 // class DisplayAll extends Component {
 //     constructor(props) {
@@ -62,7 +62,7 @@ import "./DisplayAll.css"
  
 // export default DisplayAll;
 
-function DisplayAll(props) {
+function DisplayAllSongs(props) {
     return ( 
         <div className="allSongs">
                  <h2>All Songs available!</h2>
@@ -98,4 +98,4 @@ function DisplayAll(props) {
      );
 }
 
-export default DisplayAll;
+export default DisplayAllSongs;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './component/Header/Header';
-import DisplayAll from './component/DisplayAll/DisplayAll';
+import DisplayAllSongs from './component/DisplayAllSongs/DisplayAllSongs';
 import axios from 'axios';
 import CreateSong from './component/CreateSong/CreateSong';
 import FilterTable from './component/FilterTable/FilterTable';
@@ -45,7 +45,7 @@ class App extends Component {
     return ( 
       <div className="container-fluid">
         <Header />
-        <DisplayAll deleteSongMethod ={this.deleteSong} listOfSongs ={this.state.listOfSongs} />
+        <DisplayAllSongs deleteSongMethod ={this.deleteSong} listOfSongs ={this.state.listOfSongs} />
         <CreateSong createSong={this.createSong} />
         <FilterTable getAllSongs={this.getAllSongs} />
       </div>
