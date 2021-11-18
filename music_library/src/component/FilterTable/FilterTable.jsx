@@ -63,7 +63,7 @@ class FilterTable extends Component {
         event.preventDefault();
         console.log("Filtering Music...")
         let functionFilter = this.state.listOfSongs.filter(song => {
-            if(song[this.state.userFilterType] === this.state.userFilterInput) {
+            if(song[this.state.userFilterType].toLowerCase().includes(this.state.userFilterInput.toLowerCase())) {
                 return true;
             } else {
                 return false;
